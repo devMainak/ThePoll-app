@@ -41,7 +41,7 @@ const fetchAllPolls = async () => {
 
 exports.getPolls = async (req, res) => {
   try {
-    const polls = fetchAllPolls();
+    const polls = await fetchAllPolls();
     if (polls) {
       res.status(200).json({ message: "Polls fetched successfully", polls });
     } else {
@@ -68,6 +68,7 @@ const makeAVote = async (pollId, optionIndex) => {
 exports.votePoll = async (req, res) => {
   const pollId = req.params.pollId;
   const { optionIndex } = req.body;
+  console.log("This:", pollId, optionIndex);
   try {
     const updatedPoll = await makeAVote(pollId, optionIndex);
     if (updatedPoll) {
