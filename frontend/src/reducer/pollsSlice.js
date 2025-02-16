@@ -3,7 +3,7 @@ import axios from "axios";
 
 // Async actions for polls
 export const fetchPollsAsync = createAsyncThunk("polls/fetch", async () => {
-  const response = await axios.get("http://localhost:3000/polls");
+  const response = await axios.get("https://the-poll-app.vercel.app/polls");
   console.log(response.data);
   return response.data;
 });
@@ -11,7 +11,7 @@ export const fetchPollsAsync = createAsyncThunk("polls/fetch", async () => {
 export const createPollAsync = createAsyncThunk(
   "polls/create",
   async (poll) => {
-    const response = await axios.post("http://localhost:3000/polls/create", {
+    const response = await axios.post("https://the-poll-app.vercel.app/polls/create", {
       poll: poll,
     });
     return response.data;
@@ -22,7 +22,7 @@ export const votePollAsync = createAsyncThunk(
   "polls/vote",
   async ({ pollId, optionIndex }) => {
     console.log(pollId, optionIndex);
-    const response = await axios.post(`http://localhost:3000/polls/${pollId}`, {
+    const response = await axios.post(`https://the-poll-app.vercel.app/${pollId}`, {
       optionIndex: optionIndex,
     });
     return response.data;
