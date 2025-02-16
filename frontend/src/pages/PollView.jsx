@@ -16,7 +16,7 @@ const PollView = () => {
 
   const handleVoting = (pollId, optionIndex) => {
     console.log(pollId, optionIndex);
-    dispatch(votePollAsync({pollId, optionIndex}));
+    dispatch(votePollAsync({ pollId, optionIndex }));
   };
 
   return (
