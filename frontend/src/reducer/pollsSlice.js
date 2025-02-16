@@ -22,7 +22,7 @@ export const votePollAsync = createAsyncThunk(
   "polls/vote",
   async ({ pollId, optionIndex }) => {
     console.log(pollId, optionIndex);
-    const response = await axios.post(`https://the-poll-app.vercel.app/${pollId}`, {
+    const response = await axios.post(`https://the-poll-app.vercel.app/polls/${pollId}`, {
       optionIndex: optionIndex,
     });
     return response.data;
