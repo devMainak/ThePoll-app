@@ -200,12 +200,5 @@ Common error responses for all endpoints:
 - `404 Not Found` - Poll or option does not exist.
 - `500 Internal Server Error` - Server encountered an error.
 
-## Notes
-
-- Ensure to replace `your-backend-url.com` with the actual backend URL.
-- Future improvements may include authentication, rate limiting, and additional features like poll expiration.
-
----
-
-**Author:** Your Name  
+**Author:** Mainak Das
 **Last Updated:** 2025-02-16
