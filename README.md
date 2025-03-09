@@ -26,7 +26,7 @@ The Poll model is structured as follows
 }
 ```
 
-### Fiels:
+### Fields:
 _id (string) - Unique identifier for the poll.
 question (string) - The poll question.
 options (array) - List of voting options, each containing:
